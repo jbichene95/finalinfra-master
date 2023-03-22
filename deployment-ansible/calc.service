@@ -1,0 +1,11 @@
+Unit]
+Description=Gunicorn instance to serve Flask
+After=network.target
+[Service]
+User=azureuser
+Group=www-data
+WorkingDirectory=/var/www/app/
+Environment="PATH=/var/www/app/venv/bin"
+ExecStart=/var/www/app/venv/bin/gunicorn --bind 0.0.0.0:8000 todolist.wsgi
+[Install]
+WantedBy=multi-user.target

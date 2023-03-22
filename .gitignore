@@ -1,0 +1,6 @@
+*.hcl
+*.info
+*.backup
+.terraform/
+*.tfstate
+*.pub
